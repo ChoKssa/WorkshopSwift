@@ -53,13 +53,9 @@ You should be able to build with `swift build` and run your executable with `swi
 
 ## 5. Swift Argument Parser
 
-Add a dependency to [Swift Argument Parser](https://github.com/apple/swift-argument-parser). You can use it to parse a `--rows` option to pass to the API.
+Add a dependency to [Swift Argument Parser](https://github.com/apple/swift-argument-parser). You must use it to parse a options to pass to the API.
 
-An error should be shown if `rows` is not valid. The default value for `rows` should be 10.
-
-## 6. More Arguments
-
-Add more options to the program, to be passed to the API.
+An error should be shown if an entered value is not valid.
 
 ### Example
 
@@ -79,5 +75,11 @@ $ swift run Toilets --rows 3 --start 7 --near 48.819,2.362,5000
 27  AVENUE D IVRY
 1  RUE EMILE LEVASSOR
 87  AVENUE D ITALIE
+
+$ swift run Toilets --rows hello
+Error: The value 'hello' is invalid for '--rows <rows>'
+Help:  --rows <rows>  The number of rows to show
+Usage: toilets [--rows <rows>] [--start <start>] [--type <type>] [--near <near>] [--pmr]
+  See 'toilets --help' for more information.
 
 ```
