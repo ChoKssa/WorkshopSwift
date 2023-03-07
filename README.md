@@ -59,20 +59,20 @@ An error should be shown if `rows` is not valid. The default value for `rows` sh
 
 ## 6. More Arguments
 
-Add more arguments to the program, to be passed to the API.
+Add more options to the program, to be passed to the API.
 
 The following help message should be shown:
 
 ```
 $ swift run Toilets --help
-Building for debugging...
-Build complete! (0.06s)
-USAGE: toilets [--rows <rows>] [--start <start>] [--type <type>] [--near <near>]
+Build complete! (0.57s)
+USAGE: toilets [--rows <rows>] [--start <start>] [--type <type>] [--near <near>] [--pmr]
 
 OPTIONS:
   --rows <rows>           The number of rows to show (default: 10)
   --start <start>         The number of initial rows to skip (default: 0)
   --type <type>           The type of toilet to search for
   --near <near>           The GPS coordinates and distance for the geofilter
+  --pmr                   Only show accessible toilets
   -h, --help              Show help information.
 ```
