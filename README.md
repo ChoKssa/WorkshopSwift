@@ -49,8 +49,30 @@ Use `swift package init` to create a Swift Package. Move your code to the Swift 
 
 You should be able to build with `swift build` and run your executable with `swift run`.
 
+> **Note**: `swift package init --help`
+
 ## 5. Swift Argument Parser
 
-Add a dependency to [Swift Argument Parser](https://github.com/apple/swift-argument-parser). You can use it to parse a `--rows` argument to pass to the API.
+Add a dependency to [Swift Argument Parser](https://github.com/apple/swift-argument-parser). You can use it to parse a `--rows` option to pass to the API.
 
 An error should be shown if `rows` is not valid. The default value for `rows` should be 10.
+
+## 6. More Arguments
+
+Add more arguments to the program, to be passed to the API.
+
+The following help message should be shown:
+
+```
+$ swift run Toilets --help
+Building for debugging...
+Build complete! (0.06s)
+USAGE: toilets [--rows <rows>] [--start <start>] [--type <type>] [--near <near>]
+
+OPTIONS:
+  --rows <rows>           The number of rows to show (default: 10)
+  --start <start>         The number of initial rows to skip (default: 0)
+  --type <type>           The type of toilet to search for
+  --near <near>           The GPS coordinates and distance for the geofilter
+  -h, --help              Show help information.
+```
