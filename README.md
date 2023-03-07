@@ -15,6 +15,8 @@ If you use VSCode, you can install the official plugins for Swift.
 
 Create a `hello.swift` script that prints 10 times a hello world to the standard output. You are expected to use a loop.
 
+> **Note**: Check out [The Swift Programming Language](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/controlflow)
+
 ## 1. Toilets
 
 **File**: toilets.swift
