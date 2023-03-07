@@ -61,11 +61,10 @@ An error should be shown if `rows` is not valid. The default value for `rows` sh
 
 Add more options to the program, to be passed to the API.
 
-The following help message should be shown:
+### Example
 
 ```
 $ swift run Toilets --help
-Build complete! (0.57s)
 USAGE: toilets [--rows <rows>] [--start <start>] [--type <type>] [--near <near>] [--pmr]
 
 OPTIONS:
@@ -75,4 +74,10 @@ OPTIONS:
   --near <near>           The GPS coordinates and distance for the geofilter
   --pmr                   Only show accessible toilets
   -h, --help              Show help information.
+  
+$ swift run Toilets --rows 3 --start 7 --near 48.819,2.362,5000
+27  AVENUE D IVRY
+1  RUE EMILE LEVASSOR
+87  AVENUE D ITALIE
+
 ```
