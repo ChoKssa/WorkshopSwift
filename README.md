@@ -85,3 +85,32 @@ Usage: toilets [--rows <rows>] [--start <start>] [--type <type>] [--near <near>]
   See 'toilets --help' for more information.
 
 ```
+
+## 6. Protocols
+
+To make your code more robust, and to make your code more easily testable, we can use [Protocols](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/protocols).
+
+Protocols describe a behavior, so that multiple structures can behave in a similar way while staying different.
+
+Complete the following class, implementing the `ToiletInteractor`.
+```swift
+protocol ToiletIteractor {
+    func getToilets(rows: Int, start: Int, type: String?, near: String?, pmr: Bool) throws -> [Toilet]
+}
+
+class APIToiletInteractor: ToiletInteractor {
+    func getToilets(rows: Int, start: Int, type: String?, near: String?, pmr: Bool) throws -> [Toilet] {
+        (...)
+    }
+}
+```
+
+Your command line tool should create an instance of this `APIToiletInteractor` class and call its `getToilets` function.
+
+## 7. Local implementation
+
+If your computer is offline, using the API won't work. However, we can still use `toilets2.json`! It is not updated as frequently as the API, but it can work as a backup.
+
+Create a `LocalToiletInteractor` class, which implements `ToiletInteractor` too, but uses a local file, such as `toilets1.json` or `toilets2.json` (your choice).
+
+Your `LocalToiletInteractor` could use different methods on [Array](https://developer.apple.com/documentation/swift/array/) to skip `start` elements, filter by `type`, and keep `rows` elements.
