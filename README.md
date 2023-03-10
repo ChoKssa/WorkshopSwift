@@ -4,7 +4,7 @@
 
 If you haven't already installed Swift, [install it](https://www.swift.org/download/) :
 
-- On Fedora, use `dnf install swiftlang`
+- On Fedora, use `dnf install swift-lang`
 - On macOS, install Xcode
 
 If you use VSCode, you can install the official plugins for Swift.
