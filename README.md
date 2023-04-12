@@ -114,3 +114,9 @@ If your computer is offline, using the API won't work. However, we can still use
 Create a `LocalToiletInteractor` class, which implements `ToiletInteractor` too, but uses a local file, such as `toilets1.json` or `toilets2.json` (your choice).
 
 Your `LocalToiletInteractor` could use different methods on [Array](https://developer.apple.com/documentation/swift/array/) to skip `start` elements, filter by `type`, and keep `rows` elements.
+
+## 8. Your own API (bonus)
+
+Make your own API, compatible with your `APIToiletInteractor`. Your `APIToiletInteractor` should be able to contact your own API, and your API will use a `LocalToiletInteractor` to serve the data.
+
+You should use [vapor.codes](https://vapor.codes/) to implement the web server.
